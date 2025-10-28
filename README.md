@@ -5,13 +5,18 @@ ECE.TYPE est un jeu de type « shoot'em up » où le joueur pilote un vaisseau s
 
 Technologies Utilisées:
 -Langage : C
+
 -Bibliothèque graphique : Allegro 4.4
+
 -Gestion de versions : Git/GitHub
+
 -Environnement de développement : CLion
 
 Fonctionnalités Principales :
 -3 niveaux jouables avec difficulté progressive
+
 -Défilement horizontal avec effets de parallaxe
+
 -Vaisseau du joueur contrôlable au clavier (flèches directionnelles + barre d'espace)
 -Intelligence artificielle des ennemis : ennemis fixes et mobiles avec comportements variés
 -Système d'armement : plusieurs types d'armes et de bonus (boucliers, vies supplémentaires, améliorations de puissance de feu)
