@@ -1,0 +1,1 @@
+/usr/bin/cc -L/usr/local/lib -lalleg -lm -g CMakeFiles/ProjetAllegro.dir/main.c.o CMakeFiles/ProjetAllegro.dir/Animation.c.o CMakeFiles/ProjetAllegro.dir/Graphique.c.o CMakeFiles/ProjetAllegro.dir/Vaisseau.c.o CMakeFiles/ProjetAllegro.dir/Jeu.c.o -o ProjetAllegro 
