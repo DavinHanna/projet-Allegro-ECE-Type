@@ -1,0 +1,65 @@
+int verifier_collision_vaisseau_bonus(t_vaisseau *vaisseau, t_bonus *bonus)
+{
+    if (bonus->actif) {
+        if (vaisseau->x + vaisseau->largeur >= bonus->x &&
+            vaisseau->x <= bonus->x + bonus->largeur &&
+            vaisseau->y + vaisseau->hauteur >= bonus->y &&
+            vaisseau->y <= bonus->y + bonus->hauteur) {
+
+            // Collision détectée
+            bonus->actif = 0;
+            return 1;
+        }
+    }
+    return 0;
+}
+
+int verifier_collisions_projectiles_joueur_ennemis(t_projectile projectiles[], int nb_projectiles, t_ennemi ennemis[], int nb_ennemis)
+{
+    int i, j;
+    int ennemis_detruits = 0;
+
+    for (i = 0; i < nb_projectiles; i++) {
+        if (projectiles[i].actif) {
+            for (j = 0; j < nb_ennemis; j++) {
+                if (ennemis[j].actif) {
+                    // Vérifier si le projectile touche l'ennemi
+                    if (projectiles[i].x + projectiles[i].largeur >= ennemis[j].x &&
+                        projectiles[i].x <= ennemis[j].x + ennemis[j].largeur &&
+                        projectiles[i].y + projectiles[i].hauteur >= ennemis[j].y &&
+                        projectiles[i].y <= ennemis[j].y + ennemis[j].hauteur) {
+
+                        // Collision détectée
+                        projectiles[i].actif = 0;
+                        ennemis[j].actif = 0;
+                        ennemis_detruits++;
+                        break;
+                    }
+                }
+            }
+        }
+    }
+
+    return ennemis_detruits;
+}
+
+int verifier_collisions_projectiles_ennemis_joueur(t_projectile projectiles[], int nb_projectiles, t_vaisseau *vaisseau)
+{
+    int i;
+
+    for (i = 0; i < nb_projectiles; i++) {
+        if (projectiles[i].actif) {
+            // Vérifier si le projectile touche le joueur
+            if (projectiles[i].x + projectiles[i].largeur >= vaisseau->x &&
+                projectiles[i].x <= vaisseau->x + vaisseau->largeur &&
+                projectiles[i].y + projectiles[i].hauteur >= vaisseau->y &&
+                projectiles[i].y <= vaisseau->y + vaisseau->hauteur) {
+
+                // Collision détectée
+                return 1;
+            }
+        }
+    }
+
+    return 0;
+}

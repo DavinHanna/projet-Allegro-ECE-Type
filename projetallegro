@@ -1,0 +1,81 @@
+#include <stdio.h>
+#include <allegro.h>
+#include <time.h>
+
+
+#define COULEUR_FOND         makecol(0, 0, 32)      // Bleu pour fond 
+#define COULEUR_TEXTE        makecol(234, 228, 200) // Beige pour le texte 
+#define COULEUR_TEXTE_OPTION makecol(50, 205, 50)   // Vert pour les option
+#define COULEUR_ETOILE       makecol(255, 255, 255) // Blanc pour les etoiles
+
+void initialisation_allegro() {
+    allegro_init();
+    install_keyboard();
+    install_mouse();
+    set_color_depth(desktop_color_depth());
+
+    if (set_gfx_mode(GFX_AUTODETECT_WINDOWED, 800, 600, 0, 0) != 0) {
+        allegro_message("Problème mode graphique");
+        allegro_exit();
+        exit(EXIT_FAILURE);
+    }
+
+
+    show_mouse(screen);
+}
+
+void dessiner_etoiles(BITMAP *bmp, int nb_etoiles) {
+    for (int i = 0; i < nb_etoiles; i++) {     //dessin de petits points blanc pour faires des etoiles
+        int x = rand() % SCREEN_W;
+        int y = rand() % SCREEN_H;
+        int taille = rand() % 2 + 1;
+        circlefill(bmp, x, y, taille, COULEUR_ETOILE);
+    }
+
+
+}
+
+void dessiner_planete(BITMAP *bmp, int x, int y, int rayon, int couleur) {
+    circlefill(bmp, x, y, rayon, couleur);
+}
+
+int main() {
+
+    initialisation_allegro();
+    srand(time(NULL));
+
+
+    BITMAP *buffer = create_bitmap(SCREEN_W, SCREEN_H); //buffer pour fluidite
+    if (!buffer) {
+        allegro_message("Erreur création buffer");
+        allegro_exit();
+        exit(EXIT_FAILURE);
+    }
+
+
+    FONT *titre_font = font;
+    FONT *option_font = font;
+
+
+    int termine = 0;
+
+    while (!termine) {
+
+        if (key[KEY_ESC]) termine = 1;
+        clear_to_color(buffer, COULEUR_FOND);
+        dessiner_etoiles(buffer, 100);
+        dessiner_planete(buffer, 100, 500, 60, makecol(200, 100, 50)); // Planète orange/rouge
+        dessiner_planete(buffer, 700, 100, 40, makecol(100, 150, 200)); // Planète bleue
+        textout_centre_ex(buffer, titre_font, "ECE TYPE", SCREEN_W/2, 150, COULEUR_TEXTE, -1);
+        textout_centre_ex(buffer, option_font, "NOUVELLE PARTIE", SCREEN_W/2, 300, COULEUR_TEXTE_OPTION, -1);
+        textout_centre_ex(buffer, option_font, "REPRENDRE UNE PARTIE", SCREEN_W/2, 350, COULEUR_TEXTE_OPTION, -1);
+        show_mouse(NULL);
+        blit(buffer, screen, 0, 0, 0, 0, SCREEN_W, SCREEN_H);
+        show_mouse(screen);
+        rest(20);
+    }
+    destroy_bitmap(buffer);
+    allegro_exit();
+    return 0;
+}
+END_OF_MAIN();

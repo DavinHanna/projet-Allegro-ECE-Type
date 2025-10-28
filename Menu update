@@ -1,0 +1,86 @@
+#include <stdio.h>
+#include <allegro.h>
+#include <time.h>
+
+#define COULEUR_FOND         makecol(0, 0, 0)
+#define COULEUR_TEXTE        makecol(234, 228, 200)
+#define COULEUR_TEXTE_OPTION makecol(50, 205, 50)
+#define COULEUR_ETOILE       makecol(255, 255, 255)
+
+void initialisation_allegro() {
+    allegro_init();
+    install_keyboard();
+    install_mouse();
+    set_color_depth(desktop_color_depth());
+    if (set_gfx_mode(GFX_AUTODETECT_WINDOWED, 800, 600, 0, 0) != 0) {
+        allegro_message("Probleme mode graphique");
+        allegro_exit();
+        exit(EXIT_FAILURE);
+    }
+    show_mouse(screen);
+}
+
+void dessiner_etoiles(BITMAP *bmp, int nb_etoiles) {
+    for (int i = 0; i < nb_etoiles; i++) {
+        int x = rand() % SCREEN_W;
+        int y = rand() % SCREEN_H;
+        int taille = rand() % 2 + 1;
+        circlefill(bmp, x, y, taille, COULEUR_ETOILE);
+    }
+}
+
+void dessiner_planete(BITMAP *bmp, int x, int y, int rayon, int couleur) {
+    circlefill(bmp, x, y, rayon, couleur);
+}
+
+int clic_sur_option(int x, int y, int tx, int ty, int largeur, int hauteur) {
+    return (x >= tx - largeur/2 && x <= tx + largeur/2 && y >= ty && y <= ty + hauteur);
+}
+
+void nouvelle_partie(BITMAP *buffer, FONT *font) {
+    int quitter = 0;
+    while (!quitter) {
+        if (key[KEY_ESC]) quitter = 1;
+        clear_to_color(buffer, makecol(0, 0, 0));
+        textout_centre_ex(buffer, font, "Nouvelle Partit - En cours...", SCREEN_W / 2, SCREEN_H / 2, COULEUR_TEXTE, -1);
+        blit(buffer, screen, 0, 0, 0, 0, SCREEN_W, SCREEN_H);
+        rest(20);
+    }
+}
+
+int main() {
+    initialisation_allegro();
+    srand(time(NULL));
+    BITMAP *buffer = create_bitmap(SCREEN_W, SCREEN_H);
+    if (!buffer) {
+        allegro_message("Erreur creation buffer");
+        allegro_exit();  
+        exit(EXIT_FAILURE);
+    }
+    FONT *titre_font = font;
+    FONT *option_font = font;
+    int fini = 0;
+    while (!fini) {
+        if (key[KEY_ESC]) fini = 1;
+        clear_to_color(buffer, COULEUR_FOND);
+        dessiner_etoiles(buffer, 100);
+        dessiner_planete(buffer, 100, 500, 60, makecol(200, 100, 50));
+        dessiner_planete(buffer, 700, 100, 40, makecol(100, 150, 200));
+        textout_centre_ex(buffer, titre_font, "ECE TYPE", SCREEN_W/2, 150, COULEUR_TEXTE, -1);
+        textout_centre_ex(buffer, option_font, "NOUVEL PARTIE", SCREEN_W/2, 300, COULEUR_TEXTE_OPTION, -1);
+        textout_centre_ex(buffer, option_font, "REPREND UNE PARTIE", SCREEN_W/2, 350, COULEUR_TEXTE_OPTION, -1);
+        show_mouse(NULL);
+        blit(buffer, screen, 0, 0, 0, 0, SCREEN_W, SCREEN_H);
+        show_mouse(screen);
+        if (mouse_b & 1) {
+            if (clic_sur_option(mouse_x, mouse_y, SCREEN_W/2, 300, 300, 30)) {
+                nouvelle_partie(buffer, option_font);
+            }
+        }
+        rest(20);
+    }
+    destroy_bitmap(buffer);
+    allegro_exit();
+    return 0;
+}
+END_OF_MAIN();

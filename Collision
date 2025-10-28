@@ -1,0 +1,35 @@
+int check_collisions(Shot shots[], Enemy enemies[], Spaceship *ship) {
+    int hits = 0;
+
+    for (int i = 0; i < MAX_SHOTS; i++) {
+        if (shots[i].active) {
+            if (!shots[i].is_enemy_shot) {
+                for (int j = 0; j < MAX_ENEMIES; j++) {
+                    if (enemies[j].active) {
+                        if (shots[i].x > enemies[j].x - ENEMY_SIZE/2 &&
+                            shots[i].x < enemies[j].x + ENEMY_SIZE/2 &&
+                            shots[i].y > enemies[j].y - ENEMY_SIZE/2 &&
+                            shots[i].y < enemies[j].y + ENEMY_SIZE/2) {
+
+                            shots[i].active = 0;
+                            enemies[j].active = 0;
+                            hits++;
+                            break;
+                        }
+                    }
+                }
+            } else {
+                if (shots[i].x > SHIP_X &&
+                    shots[i].x < SHIP_X + SHIP_SIZE &&
+                    shots[i].y > ship->y - SHIP_SIZE/2 &&
+                    shots[i].y < ship->y + SHIP_SIZE/2) {
+
+                    shots[i].active = 0;
+                    ship->lives--;
+                    break;
+                }
+            }
+        }
+    }
+    return hits;
+}
