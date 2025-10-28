@@ -1,0 +1,195 @@
+The system is: Linux - 6.12.5-linuxkit - aarch64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/tmp/ProjetAllegro/cmake-build-debug-docker/CMakeFiles/3.18.4/CompilerIdC/a.out"
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /tmp/ProjetAllegro/cmake-build-debug-docker/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_a8529/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a8529.dir/build.make CMakeFiles/cmTC_a8529.dir/build
+gmake[1]: Entering directory '/tmp/ProjetAllegro/cmake-build-debug-docker/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a8529.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc   -v -o CMakeFiles/cmTC_a8529.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.18/Modules/CMakeCCompilerABI.c
+Using built-in specs.
+COLLECT_GCC=/usr/bin/cc
+Target: aarch64-linux-gnu
+Configured with: /usr/src/gcc/configure --build=aarch64-linux-gnu --disable-multilib --enable-languages=c,c++,fortran,go
+Thread model: posix
+gcc version 9.5.0 (GCC) 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a8529.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64'
+ /usr/local/libexec/gcc/aarch64-linux-gnu/9.5.0/cc1 -quiet -v -imultiarch aarch64-linux-gnu /usr/share/cmake-3.18/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mlittle-endian -mabi=lp64 -auxbase-strip CMakeFiles/cmTC_a8529.dir/CMakeCCompilerABI.c.o -version -o /tmp/ccgdrFU5.s
+GNU C17 (GCC) version 9.5.0 (aarch64-linux-gnu)
+	compiled by GNU C version 9.5.0, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl version isl-0.18-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/usr/local/include/aarch64-linux-gnu"
+ignoring nonexistent directory "/usr/local/lib/gcc/aarch64-linux-gnu/9.5.0/../../../../aarch64-linux-gnu/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/lib/gcc/aarch64-linux-gnu/9.5.0/include
+ /usr/local/include
+ /usr/local/lib/gcc/aarch64-linux-gnu/9.5.0/include-fixed
+ /usr/include/aarch64-linux-gnu
+ /usr/include
+End of search list.
+GNU C17 (GCC) version 9.5.0 (aarch64-linux-gnu)
+	compiled by GNU C version 9.5.0, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3, isl version isl-0.18-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: b54f3bea7af2e4d2494f412b8ec1e112
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a8529.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64'
+ as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_a8529.dir/CMakeCCompilerABI.c.o /tmp/ccgdrFU5.s
+GNU assembler version 2.35.2 (aarch64-linux-gnu) using BFD version (GNU Binutils for Debian) 2.35.2
+COMPILER_PATH=/usr/local/libexec/gcc/aarch64-linux-gnu/9.5.0/:/usr/local/libexec/gcc/aarch64-linux-gnu/9.5.0/:/usr/local/libexec/gcc/aarch64-linux-gnu/:/usr/local/lib/gcc/aarch64-linux-gnu/9.5.0/:/usr/local/lib/gcc/aarch64-linux-gnu/
+LIBRARY_PATH=/usr/local/lib/gcc/aarch64-linux-gnu/9.5.0/:/usr/local/lib/gcc/aarch64-linux-gnu/9.5.0/../../../../lib64/:/lib/aarch64-linux-gnu/:/usr/lib/aarch64-linux-gnu/:/usr/local/lib/gcc/aarch64-linux-gnu/9.5.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a8529.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64'
+Linking C executable cmTC_a8529
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a8529.dir/link.txt --verbose=1
+/usr/bin/cc  -v CMakeFiles/cmTC_a8529.dir/CMakeCCompilerABI.c.o -o cmTC_a8529 
+Using built-in specs.
+COLLECT_GCC=/usr/bin/cc
+COLLECT_LTO_WRAPPER=/usr/local/libexec/gcc/aarch64-linux-gnu/9.5.0/lto-wrapper
+Target: aarch64-linux-gnu
+Configured with: /usr/src/gcc/configure --build=aarch64-linux-gnu --disable-multilib --enable-languages=c,c++,fortran,go
+Thread model: posix
+gcc version 9.5.0 (GCC) 
+COMPILER_PATH=/usr/local/libexec/gcc/aarch64-linux-gnu/9.5.0/:/usr/local/libexec/gcc/aarch64-linux-gnu/9.5.0/:/usr/local/libexec/gcc/aarch64-linux-gnu/:/usr/local/lib/gcc/aarch64-linux-gnu/9.5.0/:/usr/local/lib/gcc/aarch64-linux-gnu/
+LIBRARY_PATH=/usr/local/lib/gcc/aarch64-linux-gnu/9.5.0/:/usr/local/lib/gcc/aarch64-linux-gnu/9.5.0/../../../../lib64/:/lib/aarch64-linux-gnu/:/usr/lib/aarch64-linux-gnu/:/usr/local/lib/gcc/aarch64-linux-gnu/9.5.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a8529' '-mlittle-endian' '-mabi=lp64'
+ /usr/local/libexec/gcc/aarch64-linux-gnu/9.5.0/collect2 -plugin /usr/local/libexec/gcc/aarch64-linux-gnu/9.5.0/liblto_plugin.so -plugin-opt=/usr/local/libexec/gcc/aarch64-linux-gnu/9.5.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc7qW8qx.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux -o cmTC_a8529 /usr/lib/aarch64-linux-gnu/crt1.o /usr/lib/aarch64-linux-gnu/crti.o /usr/local/lib/gcc/aarch64-linux-gnu/9.5.0/crtbegin.o -L/usr/local/lib/gcc/aarch64-linux-gnu/9.5.0 -L/usr/local/lib/gcc/aarch64-linux-gnu/9.5.0/../../../../lib64 -L/lib/aarch64-linux-gnu -L/usr/lib/aarch64-linux-gnu -L/usr/local/lib/gcc/aarch64-linux-gnu/9.5.0/../../.. CMakeFiles/cmTC_a8529.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/local/lib/gcc/aarch64-linux-gnu/9.5.0/crtend.o /usr/lib/aarch64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a8529' '-mlittle-endian' '-mabi=lp64'
+gmake[1]: Leaving directory '/tmp/ProjetAllegro/cmake-build-debug-docker/CMakeFiles/CMakeTmp'
+
+
+
+Parsed C implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/usr/local/lib/gcc/aarch64-linux-gnu/9.5.0/include]
+    add: [/usr/local/include]
+    add: [/usr/local/lib/gcc/aarch64-linux-gnu/9.5.0/include-fixed]
+    add: [/usr/include/aarch64-linux-gnu]
+    add: [/usr/include]
+  end of search list found
+  collapse include dir [/usr/local/lib/gcc/aarch64-linux-gnu/9.5.0/include] ==> [/usr/local/lib/gcc/aarch64-linux-gnu/9.5.0/include]
+  collapse include dir [/usr/local/include] ==> [/usr/local/include]
+  collapse include dir [/usr/local/lib/gcc/aarch64-linux-gnu/9.5.0/include-fixed] ==> [/usr/local/lib/gcc/aarch64-linux-gnu/9.5.0/include-fixed]
+  collapse include dir [/usr/include/aarch64-linux-gnu] ==> [/usr/include/aarch64-linux-gnu]
+  collapse include dir [/usr/include] ==> [/usr/include]
+  implicit include dirs: [/usr/local/lib/gcc/aarch64-linux-gnu/9.5.0/include;/usr/local/include;/usr/local/lib/gcc/aarch64-linux-gnu/9.5.0/include-fixed;/usr/include/aarch64-linux-gnu;/usr/include]
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /tmp/ProjetAllegro/cmake-build-debug-docker/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/gmake cmTC_a8529/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a8529.dir/build.make CMakeFiles/cmTC_a8529.dir/build]
+  ignore line: [gmake[1]: Entering directory '/tmp/ProjetAllegro/cmake-build-debug-docker/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_a8529.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_a8529.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.18/Modules/CMakeCCompilerABI.c]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/cc]
+  ignore line: [Target: aarch64-linux-gnu]
+  ignore line: [Configured with: /usr/src/gcc/configure --build=aarch64-linux-gnu --disable-multilib --enable-languages=c c++ fortran go]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 9.5.0 (GCC) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a8529.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64']
+  ignore line: [ /usr/local/libexec/gcc/aarch64-linux-gnu/9.5.0/cc1 -quiet -v -imultiarch aarch64-linux-gnu /usr/share/cmake-3.18/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mlittle-endian -mabi=lp64 -auxbase-strip CMakeFiles/cmTC_a8529.dir/CMakeCCompilerABI.c.o -version -o /tmp/ccgdrFU5.s]
+  ignore line: [GNU C17 (GCC) version 9.5.0 (aarch64-linux-gnu)]
+  ignore line: [	compiled by GNU C version 9.5.0  GMP version 6.1.0  MPFR version 3.1.4  MPC version 1.0.3  isl version isl-0.18-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring nonexistent directory "/usr/local/include/aarch64-linux-gnu"]
+  ignore line: [ignoring nonexistent directory "/usr/local/lib/gcc/aarch64-linux-gnu/9.5.0/../../../../aarch64-linux-gnu/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /usr/local/lib/gcc/aarch64-linux-gnu/9.5.0/include]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /usr/local/lib/gcc/aarch64-linux-gnu/9.5.0/include-fixed]
+  ignore line: [ /usr/include/aarch64-linux-gnu]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C17 (GCC) version 9.5.0 (aarch64-linux-gnu)]
+  ignore line: [	compiled by GNU C version 9.5.0  GMP version 6.1.0  MPFR version 3.1.4  MPC version 1.0.3  isl version isl-0.18-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: b54f3bea7af2e4d2494f412b8ec1e112]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a8529.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64']
+  ignore line: [ as -v -EL -mabi=lp64 -o CMakeFiles/cmTC_a8529.dir/CMakeCCompilerABI.c.o /tmp/ccgdrFU5.s]
+  ignore line: [GNU assembler version 2.35.2 (aarch64-linux-gnu) using BFD version (GNU Binutils for Debian) 2.35.2]
+  ignore line: [COMPILER_PATH=/usr/local/libexec/gcc/aarch64-linux-gnu/9.5.0/:/usr/local/libexec/gcc/aarch64-linux-gnu/9.5.0/:/usr/local/libexec/gcc/aarch64-linux-gnu/:/usr/local/lib/gcc/aarch64-linux-gnu/9.5.0/:/usr/local/lib/gcc/aarch64-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/local/lib/gcc/aarch64-linux-gnu/9.5.0/:/usr/local/lib/gcc/aarch64-linux-gnu/9.5.0/../../../../lib64/:/lib/aarch64-linux-gnu/:/usr/lib/aarch64-linux-gnu/:/usr/local/lib/gcc/aarch64-linux-gnu/9.5.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a8529.dir/CMakeCCompilerABI.c.o' '-c' '-mlittle-endian' '-mabi=lp64']
+  ignore line: [Linking C executable cmTC_a8529]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a8529.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc  -v CMakeFiles/cmTC_a8529.dir/CMakeCCompilerABI.c.o -o cmTC_a8529 ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/cc]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/local/libexec/gcc/aarch64-linux-gnu/9.5.0/lto-wrapper]
+  ignore line: [Target: aarch64-linux-gnu]
+  ignore line: [Configured with: /usr/src/gcc/configure --build=aarch64-linux-gnu --disable-multilib --enable-languages=c c++ fortran go]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 9.5.0 (GCC) ]
+  ignore line: [COMPILER_PATH=/usr/local/libexec/gcc/aarch64-linux-gnu/9.5.0/:/usr/local/libexec/gcc/aarch64-linux-gnu/9.5.0/:/usr/local/libexec/gcc/aarch64-linux-gnu/:/usr/local/lib/gcc/aarch64-linux-gnu/9.5.0/:/usr/local/lib/gcc/aarch64-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/local/lib/gcc/aarch64-linux-gnu/9.5.0/:/usr/local/lib/gcc/aarch64-linux-gnu/9.5.0/../../../../lib64/:/lib/aarch64-linux-gnu/:/usr/lib/aarch64-linux-gnu/:/usr/local/lib/gcc/aarch64-linux-gnu/9.5.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a8529' '-mlittle-endian' '-mabi=lp64']
+  link line: [ /usr/local/libexec/gcc/aarch64-linux-gnu/9.5.0/collect2 -plugin /usr/local/libexec/gcc/aarch64-linux-gnu/9.5.0/liblto_plugin.so -plugin-opt=/usr/local/libexec/gcc/aarch64-linux-gnu/9.5.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc7qW8qx.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux -o cmTC_a8529 /usr/lib/aarch64-linux-gnu/crt1.o /usr/lib/aarch64-linux-gnu/crti.o /usr/local/lib/gcc/aarch64-linux-gnu/9.5.0/crtbegin.o -L/usr/local/lib/gcc/aarch64-linux-gnu/9.5.0 -L/usr/local/lib/gcc/aarch64-linux-gnu/9.5.0/../../../../lib64 -L/lib/aarch64-linux-gnu -L/usr/lib/aarch64-linux-gnu -L/usr/local/lib/gcc/aarch64-linux-gnu/9.5.0/../../.. CMakeFiles/cmTC_a8529.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/local/lib/gcc/aarch64-linux-gnu/9.5.0/crtend.o /usr/lib/aarch64-linux-gnu/crtn.o]
+    arg [/usr/local/libexec/gcc/aarch64-linux-gnu/9.5.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/local/libexec/gcc/aarch64-linux-gnu/9.5.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/local/libexec/gcc/aarch64-linux-gnu/9.5.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cc7qW8qx.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib/ld-linux-aarch64.so.1] ==> ignore
+    arg [-X] ==> ignore
+    arg [-EL] ==> ignore
+    arg [-maarch64linux] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_a8529] ==> ignore
+    arg [/usr/lib/aarch64-linux-gnu/crt1.o] ==> ignore
+    arg [/usr/lib/aarch64-linux-gnu/crti.o] ==> ignore
+    arg [/usr/local/lib/gcc/aarch64-linux-gnu/9.5.0/crtbegin.o] ==> ignore
+    arg [-L/usr/local/lib/gcc/aarch64-linux-gnu/9.5.0] ==> dir [/usr/local/lib/gcc/aarch64-linux-gnu/9.5.0]
+    arg [-L/usr/local/lib/gcc/aarch64-linux-gnu/9.5.0/../../../../lib64] ==> dir [/usr/local/lib/gcc/aarch64-linux-gnu/9.5.0/../../../../lib64]
+    arg [-L/lib/aarch64-linux-gnu] ==> dir [/lib/aarch64-linux-gnu]
+    arg [-L/usr/lib/aarch64-linux-gnu] ==> dir [/usr/lib/aarch64-linux-gnu]
+    arg [-L/usr/local/lib/gcc/aarch64-linux-gnu/9.5.0/../../..] ==> dir [/usr/local/lib/gcc/aarch64-linux-gnu/9.5.0/../../..]
+    arg [CMakeFiles/cmTC_a8529.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--push-state] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--pop-state] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--push-state] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--pop-state] ==> ignore
+    arg [/usr/local/lib/gcc/aarch64-linux-gnu/9.5.0/crtend.o] ==> ignore
+    arg [/usr/lib/aarch64-linux-gnu/crtn.o] ==> ignore
+  collapse library dir [/usr/local/lib/gcc/aarch64-linux-gnu/9.5.0] ==> [/usr/local/lib/gcc/aarch64-linux-gnu/9.5.0]
+  collapse library dir [/usr/local/lib/gcc/aarch64-linux-gnu/9.5.0/../../../../lib64] ==> [/usr/local/lib64]
+  collapse library dir [/lib/aarch64-linux-gnu] ==> [/lib/aarch64-linux-gnu]
+  collapse library dir [/usr/lib/aarch64-linux-gnu] ==> [/usr/lib/aarch64-linux-gnu]
+  collapse library dir [/usr/local/lib/gcc/aarch64-linux-gnu/9.5.0/../../..] ==> [/usr/local/lib]
+  implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+  implicit dirs: [/usr/local/lib/gcc/aarch64-linux-gnu/9.5.0;/usr/local/lib64;/lib/aarch64-linux-gnu;/usr/lib/aarch64-linux-gnu;/usr/local/lib]
+  implicit fwks: []
+
+

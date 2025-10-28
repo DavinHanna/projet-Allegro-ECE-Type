@@ -1,0 +1,3 @@
+/tmp/ProjetAllegro/cmake-build-debug-docker/CMakeFiles/rebuild_cache.dir
+/tmp/ProjetAllegro/cmake-build-debug-docker/CMakeFiles/ProjetAllegro.dir
+/tmp/ProjetAllegro/cmake-build-debug-docker/CMakeFiles/edit_cache.dir
