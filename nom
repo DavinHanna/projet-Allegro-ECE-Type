@@ -1,0 +1,24 @@
+void saisir_pseudo(BITMAP *buffer, char *pseudo) {
+    //Affiche l'écran de saisie du pseudo//
+    clear_bitmap(buffer);
+
+    //Dessiner le fond//
+    rectfill(buffer, LARGEUR/4, HAUTEUR/3, LARGEUR*3/4, HAUTEUR*2/3, makecol(0, 0, 100));
+    rect(buffer, LARGEUR/4, HAUTEUR/3, LARGEUR*3/4, HAUTEUR*2/3, makecol(255, 255, 255));
+
+    //Titre//
+    textprintf_centre_ex(buffer, font, LARGEUR/2, HAUTEUR/3 + 20,
+                       makecol(255, 255, 0), -1, "ENTREZ VOTRE PSEUDO");
+
+    //Afficher le pseudo actuel//
+    rectfill(buffer, LARGEUR/4 + 20, HAUTEUR/2 - 10, LARGEUR*3/4 - 20, HAUTEUR/2 + 10, makecol(0, 0, 0));
+    rect(buffer, LARGEUR/4 + 20, HAUTEUR/2 - 10, LARGEUR*3/4 - 20, HAUTEUR/2 + 10, makecol(255, 255, 255));
+    textprintf_centre_ex(buffer, font, LARGEUR/2, HAUTEUR/2,
+                       makecol(255, 255, 255), -1, "%s_", pseudo);
+
+    //Instructions//
+    textprintf_centre_ex(buffer, font, LARGEUR/2, HAUTEUR*2/3 - 30,
+                       makecol(200, 200, 200), -1, "Appuyez sur ENTRÉE pour confirmer");
+
+    blit(buffer, screen, 0, 0, 0, 0, LARGEUR, HAUTEUR);
+}

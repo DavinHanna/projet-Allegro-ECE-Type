@@ -1,0 +1,39 @@
+void dessiner_menu(BITMAP *buffer, int selection, char *pseudo, int *niveau_choisi) {
+    //Dessine le menu principal du jeu avec les options sélectionnables//
+    clear_bitmap(buffer);
+
+    //Titre du jeu//
+    textprintf_centre_ex(buffer, font, LARGEUR/2, HAUTEUR/4,
+                       makecol(255, 0, 0), -1, "ECE R-TYPE");
+
+    //Options du menu//
+    int couleur_jouer = (selection == 0) ? makecol(255, 255, 0) : makecol(255, 255, 255);
+    int couleur_niveau = (selection == 1) ? makecol(255, 255, 0) : makecol(255, 255, 255);
+    int couleur_leaderboard = (selection == 2) ? makecol(255, 255, 0) : makecol(255, 255, 255);
+    int couleur_quitter = (selection == 3) ? makecol(255, 255, 0) : makecol(255, 255, 255);
+
+    textprintf_centre_ex(buffer, font, LARGEUR/2, HAUTEUR/2 - 30,
+                       couleur_jouer, -1, "Jouer");
+
+    char niveau_texte[20];
+    if (*niveau_choisi == 0) {
+        strcpy(niveau_texte, "Boss uniquement");
+    } else {
+        sprintf(niveau_texte, "Niveau %d", *niveau_choisi);
+    }
+
+    textprintf_centre_ex(buffer, font, LARGEUR/2, HAUTEUR/2,
+                       couleur_niveau, -1, "Niveau: %s", niveau_texte);
+
+    textprintf_centre_ex(buffer, font, LARGEUR/2, HAUTEUR/2 + 30,
+                       couleur_leaderboard, -1, "Leaderboard");
+
+    textprintf_centre_ex(buffer, font, LARGEUR/2, HAUTEUR/2 + 60,
+                       couleur_quitter, -1, "Quitter");
+
+    //Afficher le pseudo actuel//
+    textprintf_centre_ex(buffer, font, LARGEUR/2, HAUTEUR*3/4,
+                       makecol(200, 200, 255), -1, "Joueur: %s", pseudo);
+
+    blit(buffer, screen, 0, 0, 0, 0, LARGEUR, HAUTEUR);
+}
